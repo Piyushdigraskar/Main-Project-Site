@@ -1,0 +1,105 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the title */
+.title {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-bottom: 2px solid #007BFF;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Style the card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style individual cards */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Style the images inside cards */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style the content inside cards */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-content .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-content .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.card-content .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card-content .btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
